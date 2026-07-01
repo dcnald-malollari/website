@@ -1,94 +1,132 @@
-/* CRYPTO® — product catalog (Drop 001)
-   Mock data only — swap in real designs/photos when ready. */
+/* ALLEGEDLY® — product catalog (Drop 001)
+   Photos live in assets/img/. Prices in USD. */
 
 const PRODUCTS = [
   {
-    id: "trust-me-bro-tee",
-    name: "TRUST ME BRO TEE",
+    id: "allegedly-logo-tee",
+    name: "ALLEGEDLY LOGO TEE",
     type: "tee",
+    category: "tee",
     color: "black",
-    price: 38,
-    lines: ["TRUST ME", "BRO"],
+    price: 42,
+    lines: ["ALLEGEDLY®"],
     badge: "NEW",
     soldOut: false,
-    desc: "The quote that has lost more money than any market crash. Heavyweight 240GSM cotton, boxy fit, printed front center."
+    photo: "assets/img/allegedly-logo-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_222334_fca067fe-2d15-4e60-9a4e-5e6e140916aa_min.webp",
+    desc: "The starting point. Small chest hit, nothing to explain. Slightly oversized, heavyweight 240GSM cotton in washed black."
   },
   {
-    id: "not-financial-advice-tee",
-    name: "NOT FINANCIAL ADVICE TEE",
+    id: "no-comment-tee",
+    name: "NO COMMENT TEE",
     type: "tee",
+    category: "tee",
     color: "bone",
-    price: 38,
-    lines: ["NOT", "FINANCIAL", "ADVICE"],
+    price: 44,
+    lines: ["NO", "COMMENT"],
     badge: "NEW",
     soldOut: false,
-    desc: "Say it before every terrible opinion. Legally it does nothing. Heavyweight 240GSM cotton in bone, boxy fit."
+    photo: "assets/img/no-comment-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_222528_ab960b16-7a7e-410f-865f-833d73064b57_min.webp",
+    desc: "The official statement. Works at dinner, works in court. Slightly oversized, heavyweight 240GSM cotton in bone."
   },
   {
-    id: "i-was-early-tee",
-    name: "I WAS EARLY TEE",
+    id: "deny-everything-tee",
+    name: "DENY EVERYTHING TEE",
     type: "tee",
+    category: "tee",
     color: "black",
-    price: 40,
-    lines: ["I WAS", "EARLY"],
+    price: 44,
+    lines: ["DENY", "EVERYTHING"],
+    badge: null,
+    soldOut: false,
+    photo: "assets/img/deny-everything-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_222651_ed82f92d-f213-494b-a66b-65509607dd38_min.webp",
+    desc: "Standard legal advice, printed front center. Slightly oversized, heavyweight 240GSM cotton in washed black."
+  },
+  {
+    id: "out-of-context-tee",
+    name: "OUT OF CONTEXT TEE",
+    type: "tee",
+    category: "tee",
+    color: "bone",
+    price: 44,
+    lines: ["TAKEN OUT", "OF CONTEXT"],
+    badge: null,
+    soldOut: false,
+    photo: "assets/img/out-of-context-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_222744_a8f53585-b8c8-4aa6-8de5-41d15445ee56_min.webp",
+    desc: "Whatever they heard, it wasn't like that. Slightly oversized, heavyweight 240GSM cotton in bone."
+  },
+  {
+    id: "sources-say-tee",
+    name: "SOURCES SAY TEE",
+    type: "tee",
+    category: "tee",
+    color: "black",
+    price: 44,
+    lines: ["SOURCES", "SAY"],
     badge: "LOW STOCK",
     soldOut: false,
-    desc: "You weren't. But the shirt says otherwise. Heavyweight 240GSM cotton, boxy fit, printed front center."
+    photo: "assets/img/sources-say-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_222838_1a85390d-72ca-449b-a371-8379a6379e50_min.webp",
+    desc: "Per sources familiar with the matter. Slightly oversized, heavyweight 240GSM cotton in washed black."
   },
   {
-    id: "funds-are-safe-tee",
-    name: "FUNDS ARE SAFE TEE",
+    id: "i-said-what-i-said-tee",
+    name: "I SAID WHAT I SAID TEE",
     type: "tee",
+    category: "tee",
     color: "bone",
-    price: 38,
-    lines: ["FUNDS ARE", "SAFE"],
+    price: 44,
+    lines: ["I SAID", "WHAT I SAID"],
     badge: null,
     soldOut: false,
-    desc: "Famous last words, now in cotton. Heavyweight 240GSM in bone, boxy fit, printed front center."
+    photo: "assets/img/i-said-what-i-said-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_222921_f4750726-d527-43c6-8061-360212458b29_min.webp",
+    desc: "No retraction. No follow-up. Slightly oversized, heavyweight 240GSM cotton in bone."
   },
   {
-    id: "sold-the-bottom-tee",
-    name: "SOLD THE BOTTOM TEE",
-    type: "tee",
-    color: "black",
-    price: 38,
-    lines: ["SOLD THE", "BOTTOM"],
-    badge: null,
-    soldOut: true,
-    desc: "For the humble. Wear your worst trade. Heavyweight 240GSM cotton, boxy fit. Sold out — the quote has retired."
-  },
-  {
-    id: "delete-the-app-tee",
-    name: "DELETE THE APP TEE",
-    type: "tee",
-    color: "black",
-    price: 40,
-    lines: ["DELETE", "THE APP"],
-    badge: null,
-    soldOut: false,
-    desc: "Self care for people who check charts in the shower. Heavyweight 240GSM cotton, boxy fit."
-  },
-  {
-    id: "up-only-hoodie",
-    name: "UP ONLY HOODIE",
+    id: "no-further-questions-hoodie",
+    name: "NO FURTHER QUESTIONS HOODIE",
     type: "hoodie",
+    category: "fleece",
     color: "black",
-    price: 72,
-    lines: ["UP ONLY"],
+    price: 88,
+    lines: ["NO FURTHER", "QUESTIONS"],
     badge: "NEW",
     soldOut: false,
-    desc: "Manifest it. 450GSM brushed fleece, oversized fit, kangaroo pocket, printed front center."
+    photo: "assets/img/no-further-questions-hoodie.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_223004_f885d40f-c1ed-4f84-b7e0-560fff6a6c66_min.webp",
+    desc: "The conversation is over. 450GSM brushed fleece in washed black, oversized fit, kangaroo pocket."
   },
   {
-    id: "generational-wealth-hoodie",
-    name: "GENERATIONAL WEALTH HOODIE",
+    id: "off-the-record-hoodie",
+    name: "OFF THE RECORD HOODIE",
     type: "hoodie",
+    category: "fleece",
     color: "bone",
-    price: 72,
-    lines: ["GENERATIONAL", "WEALTH", "(LOADING...)"],
+    price: 88,
+    lines: ["OFF THE", "RECORD"],
     badge: null,
     soldOut: false,
-    desc: "Any day now. 450GSM brushed fleece in bone, oversized fit, kangaroo pocket, printed front center."
+    photo: "assets/img/off-the-record-hoodie.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_223046_d6edb8d8-92de-4544-85a2-701e986fedf6_min.webp",
+    desc: "Everything you're about to say in it doesn't count. 450GSM brushed fleece in bone, oversized fit, kangaroo pocket."
+  },
+  {
+    id: "burden-of-proof-crew",
+    name: "BURDEN OF PROOF CREWNECK",
+    type: "crew",
+    category: "fleece",
+    color: "grey",
+    price: 72,
+    lines: ["BURDEN", "OF PROOF"],
+    badge: "LOW STOCK",
+    soldOut: false,
+    photo: "assets/img/burden-of-proof-crew.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_223125_1e7c1853-a0e5-42ca-8c7b-7a7666603d5a_min.webp",
+    desc: "It's on them, not you. 400GSM loopback cotton crewneck in washed heather grey, slightly oversized."
   }
 ];
 
@@ -96,7 +134,8 @@ const PRODUCTS = [
 
 const GARMENT_COLORS = {
   black: { fill: "#1a1a1a", stroke: "#333333", text: "#ece7dc" },
-  bone:  { fill: "#ece7dc", stroke: "#c9c2b2", text: "#141414" }
+  bone:  { fill: "#ece7dc", stroke: "#c9c2b2", text: "#141414" },
+  grey:  { fill: "#a8a49a", stroke: "#8b877d", text: "#141414" }
 };
 
 function quoteTextSVG(product, cx, cy) {
@@ -112,7 +151,7 @@ function quoteTextSVG(product, cx, cy) {
     .join("");
   const brandY = startY + product.lines.length * lineHeight + 4;
   return tspans +
-    `<text x="${cx}" y="${brandY.toFixed(1)}" text-anchor="middle" font-family="'Space Mono', monospace" font-size="7" fill="${c.text}" opacity="0.55">CRYPTO®</text>`;
+    `<text x="${cx}" y="${brandY.toFixed(1)}" text-anchor="middle" font-family="'Space Mono', monospace" font-size="7" fill="${c.text}" opacity="0.55">ALLEGEDLY®</text>`;
 }
 
 function teeSVG(product) {
@@ -145,9 +184,30 @@ function hoodieSVG(product) {
   </svg>`;
 }
 
-function garmentSVG(product) {
-  return product.type === "hoodie" ? hoodieSVG(product) : teeSVG(product);
+function crewSVG(product) {
+  const c = GARMENT_COLORS[product.color];
+  return `
+  <svg viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${product.name} mockup">
+    <path d="M97 38 C104 52 125 60 150 60 C175 60 196 52 203 38 L236 52 C256 61 267 76 271 94 L284 208 C284.5 214 280 219 274 219 L248 219 C243 219 239 215 238.5 210 L230 148 L230 286 C230 295 223 302 214 302 L86 302 C77 302 70 295 70 286 L70 148 L61.5 210 C61 215 57 219 52 219 L26 219 C20 219 15.5 214 16 208 L29 94 C33 76 44 61 64 52 Z"
+      fill="${c.fill}" stroke="${c.stroke}" stroke-width="1.5"/>
+    <path d="M100 36 C107 49 126 57 150 57 C174 57 193 49 200 36"
+      fill="none" stroke="${c.stroke}" stroke-width="3"/>
+    <line x1="70" y1="294" x2="230" y2="294" stroke="${c.stroke}" stroke-width="1" opacity="0.6"/>
+    ${quoteTextSVG(product, 150, 155)}
+  </svg>`;
 }
+
+function garmentSVG(product) {
+  if (product.type === "hoodie") return hoodieSVG(product);
+  if (product.type === "crew") return crewSVG(product);
+  return teeSVG(product);
+}
+
+/* Homepage campaign image: local file -> CDN fallback (see scripts/download-images.sh) */
+const CAMPAIGN_IMG = {
+  local: "assets/img/campaign.webp",
+  remote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_223203_0c4f9427-3ef3-429c-9cf1-a82174aec8e7_min.webp"
+};
 
 function getProduct(id) {
   return PRODUCTS.find(p => p.id === id) || null;

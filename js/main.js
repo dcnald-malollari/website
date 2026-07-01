@@ -1,6 +1,6 @@
-/* CRYPTO® — cart + shared UI (used by index.html and product.html) */
+/* ALLEGEDLY® — cart + shared UI (used by all pages) */
 
-const CART_KEY = "crypto_cart_v1";
+const CART_KEY = "allegedly_cart_v1";
 const SIZES = ["XS", "S", "M", "L", "XL"];
 
 /* ---- Cart state ---- */
@@ -160,12 +160,13 @@ function renderCheckoutLocked() {
     <div class="checkout-locked">
       <p class="lock-title">CHECKOUT OPENS WITH<br/>DROP 001 RELEASE</p>
       <p class="lock-sub">FIRST ACCESS GOES TO THE LIST.<br/>DROP LINK LANDS ON INSTAGRAM.</p>
+      <p class="lock-sub" style="margin-top:-8px">ALLEGEDLY.</p>
       <form class="news-form" id="lock-form">
         <input type="email" placeholder="EMAIL" required aria-label="Email address" />
         <button type="submit">NOTIFY ME</button>
       </form>
       <p class="news-success" id="lock-success" hidden>YOU'RE ON THE LIST.</p>
-      <a class="btn btn-ghost btn-block" href="https://instagram.com" target="_blank" rel="noopener">FOLLOW @WEARCRYPTO</a>
+      <a class="btn btn-ghost btn-block" href="https://instagram.com/dcnald" target="_blank" rel="noopener">FOLLOW @DCNALD</a>
     </div>`;
   const form = document.getElementById("lock-form");
   form.addEventListener("submit", e => {
@@ -196,8 +197,24 @@ function productCard(p) {
 function renderGrid(filter) {
   const grid = document.getElementById("product-grid");
   if (!grid) return;
-  const items = PRODUCTS.filter(p => filter === "all" || p.type === filter);
+  const items = PRODUCTS.filter(p => filter === "all" || p.category === filter);
   grid.innerHTML = items.map(productCard).join("");
+}
+
+/* ---- Campaign image (index page) ----
+   Resolves local file -> CDN -> hides the section. */
+function initCampaign() {
+  const img = document.getElementById("campaign-img");
+  if (!img || typeof CAMPAIGN_IMG === "undefined") return;
+  img.onerror = () => {
+    if (CAMPAIGN_IMG.remote && !img.src.startsWith(CAMPAIGN_IMG.remote)) {
+      img.src = CAMPAIGN_IMG.remote;
+    } else {
+      const section = document.getElementById("campaign");
+      if (section) section.remove();
+    }
+  };
+  img.src = CAMPAIGN_IMG.local;
 }
 
 /* ---- Init ---- */
@@ -205,6 +222,7 @@ function renderGrid(filter) {
 document.addEventListener("DOMContentLoaded", () => {
   renderCartCount();
   renderGrid("all");
+  initCampaign();
 
   const filters = document.getElementById("filters");
   if (filters) {
