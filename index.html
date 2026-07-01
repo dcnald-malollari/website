@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRYPTO® — WEAR THE LARP</title>
+  <meta name="description" content="CRYPTO is a limited-run clothing label. Heavyweight tees printed with the quotes you already send the group chat. No restocks." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0b0b'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='20' font-weight='bold' fill='%23c6f235' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Announcement marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>DROP 001 — LIVE NOW</span><span>///</span>
+      <span>FREE WORLDWIDE SHIPPING OVER $75</span><span>///</span>
+      <span>LIMITED RUN — NO RESTOCKS</span><span>///</span>
+      <span>DROP 001 — LIVE NOW</span><span>///</span>
+      <span>FREE WORLDWIDE SHIPPING OVER $75</span><span>///</span>
+      <span>LIMITED RUN — NO RESTOCKS</span><span>///</span>
+      <span>DROP 001 — LIVE NOW</span><span>///</span>
+      <span>FREE WORLDWIDE SHIPPING OVER $75</span><span>///</span>
+      <span>LIMITED RUN — NO RESTOCKS</span><span>///</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">CRYPTO<sup>®</sup></a>
+    <nav class="nav">
+      <a href="#shop">SHOP</a>
+      <a href="#about">ABOUT</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">INSTAGRAM</a>
+    </nav>
+    <button class="cart-btn" id="cart-open" aria-label="Open cart">
+      CART <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero-kicker">// DROP 001 — AVAILABLE NOW</p>
+      <h1 class="hero-title">CRYPTO<sup>®</sup></h1>
+      <p class="hero-sub">WEAR THE LARP.</p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn btn-primary">SHOP THE DROP</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-ghost">@WEARCRYPTO</a>
+      </div>
+      <div class="hero-meta">
+        <span>EST. 2026</span>
+        <span>WORLDWIDE SHIPPING</span>
+        <span>NO RESTOCKS</span>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="shop" id="shop">
+      <div class="section-head">
+        <h2>DROP 001</h2>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">ALL</button>
+          <button class="filter" data-filter="tee">TEES</button>
+          <button class="filter" data-filter="hoodie">HOODIES</button>
+        </div>
+      </div>
+      <div class="grid" id="product-grid"></div>
+    </section>
+
+    <!-- Quote marquee -->
+    <div class="marquee marquee-big" aria-hidden="true">
+      <div class="marquee-track">
+        <span>TRUST ME BRO</span><span>///</span>
+        <span>I WAS EARLY</span><span>///</span>
+        <span>NOT FINANCIAL ADVICE</span><span>///</span>
+        <span>FUNDS ARE SAFE</span><span>///</span>
+        <span>UP ONLY</span><span>///</span>
+        <span>TRUST ME BRO</span><span>///</span>
+        <span>I WAS EARLY</span><span>///</span>
+        <span>NOT FINANCIAL ADVICE</span><span>///</span>
+        <span>FUNDS ARE SAFE</span><span>///</span>
+        <span>UP ONLY</span><span>///</span>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <p class="about-kicker">// THE BRAND</p>
+      <p class="about-copy">
+        CRYPTO is a clothing label for people who talk like they're already rich.
+        Heavyweight tees printed with the quotes you send the group chat at 3AM.
+        Limited runs only — when a drop sells out, the quote retires forever.
+      </p>
+      <p class="about-copy dim">
+        None of this is financial advice. All of it is 240GSM cotton.
+      </p>
+    </section>
+
+    <!-- Instagram CTA -->
+    <section class="ig">
+      <p class="ig-kicker">// SEEN ON THE FEED</p>
+      <a class="ig-handle" href="https://instagram.com" target="_blank" rel="noopener">@WEARCRYPTO</a>
+      <p class="ig-sub">TAG US IN YOUR FIT PICS. BEST LARP GETS REPOSTED.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <span class="logo">CRYPTO<sup>®</sup></span>
+        <p>LIMITED-RUN CLOTHING.<br />PRINTED QUOTES. NO RESTOCKS.</p>
+      </div>
+      <div class="footer-col">
+        <h4>HELP</h4>
+        <a href="#">SHIPPING</a>
+        <a href="#">RETURNS</a>
+        <a href="#">SIZE GUIDE</a>
+        <a href="#">CONTACT</a>
+      </div>
+      <div class="footer-col">
+        <h4>SOCIAL</h4>
+        <a href="https://instagram.com" target="_blank" rel="noopener">INSTAGRAM</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener">TIKTOK</a>
+        <a href="https://x.com" target="_blank" rel="noopener">X</a>
+      </div>
+      <div class="footer-col footer-news">
+        <h4>MAILING LIST</h4>
+        <p>DROP DATES. EARLY ACCESS. NOTHING ELSE.</p>
+        <form class="news-form" id="news-form">
+          <input type="email" placeholder="EMAIL" required aria-label="Email address" />
+          <button type="submit">JOIN</button>
+        </form>
+        <p class="news-success" id="news-success" hidden>YOU'RE IN. WATCH YOUR INBOX.</p>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© 2026 CRYPTO WORLDWIDE. ALL RIGHTS RESERVED.</span>
+      <span>NOT FINANCIAL ADVICE.</span>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="cart-drawer" aria-label="Shopping cart" hidden>
+    <div class="drawer-head">
+      <h3>CART <span id="drawer-count">(0)</span></h3>
+      <button class="drawer-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+    <div class="drawer-foot" id="drawer-foot">
+      <div class="drawer-subtotal">
+        <span>SUBTOTAL</span>
+        <span id="drawer-subtotal">$0 USD</span>
+      </div>
+      <p class="drawer-note">SHIPPING CALCULATED AT CHECKOUT.</p>
+      <button class="btn btn-primary btn-block" id="checkout-btn">CHECKOUT</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
