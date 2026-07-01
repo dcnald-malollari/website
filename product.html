@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRYPTO® — PRODUCT</title>
+  <meta name="description" content="CRYPTO Drop 001 — limited-run heavyweight quote tees and hoodies. No restocks." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0b0b'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='20' font-weight='bold' fill='%23c6f235' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>DROP 001 — LIVE NOW</span><span>///</span>
+      <span>FREE WORLDWIDE SHIPPING OVER $75</span><span>///</span>
+      <span>LIMITED RUN — NO RESTOCKS</span><span>///</span>
+      <span>DROP 001 — LIVE NOW</span><span>///</span>
+      <span>FREE WORLDWIDE SHIPPING OVER $75</span><span>///</span>
+      <span>LIMITED RUN — NO RESTOCKS</span><span>///</span>
+      <span>DROP 001 — LIVE NOW</span><span>///</span>
+      <span>FREE WORLDWIDE SHIPPING OVER $75</span><span>///</span>
+      <span>LIMITED RUN — NO RESTOCKS</span><span>///</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">CRYPTO<sup>®</sup></a>
+    <nav class="nav">
+      <a href="index.html#shop">SHOP</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">INSTAGRAM</a>
+    </nav>
+    <button class="cart-btn" id="cart-open" aria-label="Open cart">
+      CART <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="pdp">
+      <a class="pdp-back" href="index.html#shop">← BACK TO DROP 001</a>
+      <div class="pdp-layout">
+        <div class="pdp-media" id="pdp-media"></div>
+        <div class="pdp-info">
+          <p class="pdp-kicker" id="pdp-kicker">// DROP 001</p>
+          <h1 class="pdp-name" id="pdp-name"></h1>
+          <p class="pdp-price" id="pdp-price"></p>
+          <p class="pdp-desc" id="pdp-desc"></p>
+
+          <div class="pdp-sizes">
+            <div class="pdp-sizes-head">
+              <span>SIZE</span>
+              <span class="size-error" id="size-error" hidden>SELECT A SIZE</span>
+            </div>
+            <div class="size-row" id="size-row"></div>
+          </div>
+
+          <button class="btn btn-primary btn-block" id="add-btn">ADD TO CART</button>
+
+          <details class="pdp-details">
+            <summary>DETAILS</summary>
+            <ul>
+              <li>HEAVYWEIGHT COTTON — SCREEN-PRINTED FRONT</li>
+              <li>BOXY / OVERSIZED FIT — SIZE DOWN FOR REGULAR</li>
+              <li>LIMITED RUN — NO RESTOCKS, EVER</li>
+            </ul>
+          </details>
+          <details class="pdp-details">
+            <summary>SIZE GUIDE</summary>
+            <table class="size-table">
+              <thead>
+                <tr><th></th><th>XS</th><th>S</th><th>M</th><th>L</th><th>XL</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>CHEST (IN)</td><td>40</td><td>42</td><td>44</td><td>46</td><td>48</td></tr>
+                <tr><td>LENGTH (IN)</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+              </tbody>
+            </table>
+          </details>
+          <details class="pdp-details">
+            <summary>SHIPPING &amp; RETURNS</summary>
+            <ul>
+              <li>WORLDWIDE SHIPPING — FREE OVER $75</li>
+              <li>SHIPS WITHIN 3–5 BUSINESS DAYS</li>
+              <li>14-DAY RETURNS, UNWORN WITH TAGS</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="section-head">
+        <h2>MORE FROM DROP 001</h2>
+      </div>
+      <div class="grid" id="related-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <span class="logo">CRYPTO<sup>®</sup></span>
+        <p>LIMITED-RUN CLOTHING.<br />PRINTED QUOTES. NO RESTOCKS.</p>
+      </div>
+      <div class="footer-col">
+        <h4>HELP</h4>
+        <a href="#">SHIPPING</a>
+        <a href="#">RETURNS</a>
+        <a href="#">SIZE GUIDE</a>
+        <a href="#">CONTACT</a>
+      </div>
+      <div class="footer-col">
+        <h4>SOCIAL</h4>
+        <a href="https://instagram.com" target="_blank" rel="noopener">INSTAGRAM</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener">TIKTOK</a>
+        <a href="https://x.com" target="_blank" rel="noopener">X</a>
+      </div>
+      <div class="footer-col footer-news">
+        <h4>MAILING LIST</h4>
+        <p>DROP DATES. EARLY ACCESS. NOTHING ELSE.</p>
+        <form class="news-form" id="news-form">
+          <input type="email" placeholder="EMAIL" required aria-label="Email address" />
+          <button type="submit">JOIN</button>
+        </form>
+        <p class="news-success" id="news-success" hidden>YOU'RE IN. WATCH YOUR INBOX.</p>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© 2026 CRYPTO WORLDWIDE. ALL RIGHTS RESERVED.</span>
+      <span>NOT FINANCIAL ADVICE.</span>
+    </div>
+  </footer>
+
+  <div class="drawer-overlay" id="drawer-overlay" hidden></div>
+  <aside class="drawer" id="cart-drawer" aria-label="Shopping cart" hidden>
+    <div class="drawer-head">
+      <h3>CART <span id="drawer-count">(0)</span></h3>
+      <button class="drawer-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+    <div class="drawer-foot" id="drawer-foot">
+      <div class="drawer-subtotal">
+        <span>SUBTOTAL</span>
+        <span id="drawer-subtotal">$0 USD</span>
+      </div>
+      <p class="drawer-note">SHIPPING CALCULATED AT CHECKOUT.</p>
+      <button class="btn btn-primary btn-block" id="checkout-btn">CHECKOUT</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
