@@ -11,13 +11,15 @@ Pure static site — HTML, CSS, vanilla JS. No build step, no dependencies. Depl
 ## Structure
 
 ```
-index.html                  Landing — hero, Drop 001 grid, campaign image, about, IG CTA
+index.html                  Landing — hero, Drop 001 grid, campaign image, plug strip, about
 product.html                Product detail page (reads ?id=; photo gallery + mockup)
 info.html                   Shipping, returns, size guide, FAQ, contact
+referral.html               The Plug Program — 20% referral signup + code generator
 css/style.css               All styling
-js/products.js              Product catalog, photo URLs, SVG garment mockups
-js/main.js                  Cart (localStorage), drawer, filters, campaign loader
+js/products.js              Product catalog (14 pieces), photo URLs, SVG garment mockups
+js/main.js                  Cart, drawer, filters, referral capture, email popup
 js/product.js               PDP logic (gallery, sizes, add to cart, related)
+js/referral.js              Plug Program code generation + persistence
 scripts/download-images.sh  Localizes CDN-hosted photos into assets/img/
 ```
 
@@ -39,9 +41,9 @@ All products live in `js/products.js` — id, name, type (`tee`/`hoodie`/`crew`)
 ## Launch status
 
 - Checkout is intentionally "locked until drop" with email capture — wire up Shopify Buy Button or Stripe Payment Links when ready to take money.
-- Newsletter forms are front-end only — connect Mailchimp/Klaviyo.
+- Newsletter forms + the 10%-off popup (code `ALLEGED10`) are front-end only — connect Mailchimp/Klaviyo, and create the discount code in the commerce platform when payments go live.
+- **Plug Program (referrals):** visitors generate a code on `referral.html`; `?ref=` links tag visitors for 30 days (localStorage) and surface in the cart/checkout. Actual commission tracking + payouts need the commerce backend — on Shopify, migrate this to an affiliate app (e.g. UpPromote/Refersion) and keep the same 20% terms.
 - Contact email in `info.html` is a placeholder (`allegedly.worldwide@gmail.com`) — create it or swap in your real one.
-- TikTok/X footer links point at platform homepages — update or remove.
 
 ## Run locally
 
