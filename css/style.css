@@ -424,6 +424,33 @@ sup {
   color: var(--text-dim);
 }
 
+/* ---- Plug strip ---- */
+
+.plug-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 40px 24px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-raised);
+}
+
+.plug-strip-title {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.plug-strip-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+
 /* ---- About ---- */
 
 .about {
@@ -797,6 +824,236 @@ sup {
   letter-spacing: 0.08em;
   color: var(--text-dim);
   line-height: 1.8;
+}
+
+/* ---- Email popup ---- */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup {
+  position: relative;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  padding: 40px 36px 28px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  transform: translateY(12px);
+  transition: transform 0.3s;
+}
+
+.popup-overlay.show .popup {
+  transform: translateY(0);
+}
+
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 16px;
+  padding: 6px;
+}
+
+.popup-close:hover {
+  color: var(--text);
+}
+
+.popup-kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.popup-title {
+  font-size: clamp(28px, 6vw, 40px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.popup-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  line-height: 1.8;
+  margin-top: 14px;
+}
+
+.popup-form {
+  margin-top: 18px;
+}
+
+.popup-code {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin: 10px 0;
+}
+
+.popup-dismiss {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin-top: 18px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.popup-dismiss:hover {
+  color: var(--text);
+}
+
+/* ---- Referral (Plug Program) ---- */
+
+.referral-lede {
+  font-size: clamp(16px, 2.4vw, 22px);
+  line-height: 1.6;
+  color: var(--text-dim);
+  max-width: 56ch;
+  margin-top: 20px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.step {
+  border: 1px solid var(--line);
+  padding: 20px;
+}
+
+.step-num {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.step p {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+
+.referral-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 420px;
+}
+
+.referral-form input {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  padding: 14px 16px;
+  outline: none;
+}
+
+.referral-form input:focus {
+  border-color: var(--accent);
+}
+
+.referral-form input::placeholder {
+  color: var(--text-dim);
+}
+
+.referral-result {
+  border: 1px solid var(--accent);
+  padding: 28px;
+  max-width: 480px;
+}
+
+.ref-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.ref-code {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.ref-link-row {
+  display: flex;
+  gap: 0;
+}
+
+.ref-link-row input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-right: none;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 12px 14px;
+  outline: none;
+}
+
+.ref-note {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+.drawer-ref {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  line-height: 1.7;
 }
 
 /* ---- Toast ---- */
@@ -1261,6 +1518,10 @@ sup {
   .about,
   .ig {
     padding: 64px 20px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
   }
 }
 

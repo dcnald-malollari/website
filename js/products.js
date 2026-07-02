@@ -127,6 +127,76 @@ const PRODUCTS = [
     photo: "assets/img/burden-of-proof-crew.webp",
     photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260701_223125_1e7c1853-a0e5-42ca-8c7b-7a7666603d5a_min.webp",
     desc: "It's on them, not you. 400GSM loopback cotton crewneck in washed heather grey, slightly oversized."
+  },
+  {
+    id: "unindicted-co-conspirator-tee",
+    name: "UNINDICTED CO-CONSPIRATOR TEE",
+    type: "tee",
+    category: "tee",
+    color: "black",
+    price: 44,
+    lines: ["UNINDICTED", "CO-CONSPIRATOR"],
+    badge: "NEW",
+    soldOut: false,
+    photo: "assets/img/unindicted-co-conspirator-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260702_030948_fd066b68-88c5-431b-9503-707259f853e2_min.webp",
+    desc: "Involved in everything. Charged with nothing. Slightly oversized, heavyweight 240GSM cotton in washed black."
+  },
+  {
+    id: "plead-the-fifth-tee",
+    name: "PLEAD THE FIFTH TEE",
+    type: "tee",
+    category: "tee",
+    color: "bone",
+    price: 44,
+    lines: ["PLEAD", "THE FIFTH"],
+    badge: "NEW",
+    soldOut: false,
+    photo: "assets/img/plead-the-fifth-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260702_031116_a57f472a-b393-4fe0-b0ff-bcc003fe642a_min.webp",
+    desc: "The only legal advice printed on cotton. Slightly oversized, heavyweight 240GSM in bone."
+  },
+  {
+    id: "rug-pull-survivor-tee",
+    name: "RUG PULL SURVIVOR TEE",
+    type: "tee",
+    category: "tee",
+    color: "grey",
+    price: 44,
+    lines: ["RUG PULL", "SURVIVOR"],
+    badge: null,
+    soldOut: false,
+    photo: "assets/img/rug-pull-survivor-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260702_031226_7ecfdb7b-2ec9-48ba-89d7-e70f0ad5b050_min.webp",
+    desc: "You trusted. You lost. You lived. Slightly oversized, heavyweight 240GSM cotton in washed heather grey."
+  },
+  {
+    id: "not-a-pyramid-tee",
+    name: "IT'S NOT A PYRAMID TEE",
+    type: "tee",
+    category: "tee",
+    color: "bone",
+    price: 44,
+    lines: ["IT'S NOT", "A PYRAMID"],
+    badge: null,
+    soldOut: false,
+    photo: "assets/img/not-a-pyramid-tee.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260702_031311_5031bcbb-2e3e-4d35-856e-4bccbd22afc2_min.webp",
+    desc: "It's a triangle of opportunity. Slightly oversized, heavyweight 240GSM cotton in bone."
+  },
+  {
+    id: "guaranteed-returns-hoodie",
+    name: "GUARANTEED RETURNS HOODIE",
+    type: "hoodie",
+    category: "fleece",
+    color: "black",
+    price: 88,
+    lines: ["GUARANTEED", "RETURNS*"],
+    badge: "NEW",
+    soldOut: false,
+    photo: "assets/img/guaranteed-returns-hoodie.webp",
+    photoRemote: "https://d8j0ntlcm91z4.cloudfront.net/user_3FdYPzBsaVWvMIu38NVKxnkIsQ6/hf_20260702_031348_7633844f-f59e-4b55-87a4-1a652e8c5afa_min.webp",
+    desc: "*Returns not guaranteed. 450GSM brushed fleece in washed black, oversized fit, kangaroo pocket."
   }
 ];
 
