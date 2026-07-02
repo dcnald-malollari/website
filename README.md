@@ -1,8 +1,8 @@
-# CRYPTO® — WEAR THE LARP
+# ALLEGEDLY® — NOTHING HAS BEEN CONFIRMED
 
-Storefront for CRYPTO, a limited-run clothing label built for an Instagram-first audience (18–25). Drop-culture format: quote tees and hoodies, limited runs, no restocks.
+Storefront for ALLEGEDLY, a limited-run clothing label built for an Instagram-first audience (18–25). Drop-culture format: deadpan quote tees, hoodies, and crewnecks — heavyweight cotton, slightly oversized, no restocks.
 
-**Note:** "CRYPTO" is a placeholder brand name. All products, prices, and imagery are mockups — swap in real designs and product photos when ready.
+Instagram: [@dcnald](https://instagram.com/dcnald)
 
 ## Stack
 
@@ -11,23 +11,37 @@ Pure static site — HTML, CSS, vanilla JS. No build step, no dependencies. Depl
 ## Structure
 
 ```
-index.html      Landing page — hero, Drop 001 grid, about, Instagram CTA
-product.html    Product detail page (reads ?id= from js/products.js)
-css/style.css   All styling
-js/products.js  Product catalog + SVG garment mockup rendering
-js/main.js      Cart (localStorage), drawer, filters, toasts
-js/product.js   Product page logic (sizes, add to cart, related items)
+index.html                  Landing — hero, Drop 001 grid, campaign image, about, IG CTA
+product.html                Product detail page (reads ?id=; photo gallery + mockup)
+info.html                   Shipping, returns, size guide, FAQ, contact
+css/style.css               All styling
+js/products.js              Product catalog, photo URLs, SVG garment mockups
+js/main.js                  Cart (localStorage), drawer, filters, campaign loader
+js/product.js               PDP logic (gallery, sizes, add to cart, related)
+scripts/download-images.sh  Localizes CDN-hosted photos into assets/img/
+```
+
+## Product photos
+
+Product/campaign photos are AI-generated (Higgsfield Soul) and currently **hot-linked from the Higgsfield CDN**. Every image resolves in this order: local file in `assets/img/` → CDN URL → SVG mockup fallback, so nothing ever looks broken.
+
+To make the site self-contained (recommended before heavy promotion), run from any machine with normal internet access:
+
+```bash
+bash scripts/download-images.sh
+git add assets/img && git commit -m "Localize product photos" && git push
 ```
 
 ## Editing products
 
-All products live in `js/products.js`. Each entry has an id, name, type (`tee`/`hoodie`), color (`black`/`bone`), price, quote lines, optional badge, and sold-out flag. Product mockups are generated as SVG from the quote text — replace `garmentSVG()` usage with real product photos when designs exist.
+All products live in `js/products.js` — id, name, type (`tee`/`hoodie`/`crew`), category (`tee`/`fleece`), color (`black`/`bone`/`grey`), price, quote lines, badge, sold-out flag, photo paths, description.
 
-## Notes
+## Launch status
 
-- Checkout is intentionally "locked until drop" with an email capture — no payment processing is wired up yet.
-- Instagram/TikTok/X links point at the platform homepages — update to real profiles.
-- Newsletter forms are front-end only; connect to a mail provider (e.g. Mailchimp, Klaviyo) later.
+- Checkout is intentionally "locked until drop" with email capture — wire up Shopify Buy Button or Stripe Payment Links when ready to take money.
+- Newsletter forms are front-end only — connect Mailchimp/Klaviyo.
+- Contact email in `info.html` is a placeholder (`allegedly.worldwide@gmail.com`) — create it or swap in your real one.
+- TikTok/X footer links point at platform homepages — update or remove.
 
 ## Run locally
 
