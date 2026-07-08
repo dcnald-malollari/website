@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AccessHarbor — European Accessibility Act compliance for e-commerce</title>
+<meta name="description" content="AccessHarbor gets e-commerce brands selling into Europe audited, remediated, and defensible under the European Accessibility Act (EAA). Free compliance scan.">
+<style>
+  :root {
+    --navy: #0d2137; --navy-2: #14304d; --teal: #7fd1c0; --teal-dark: #0e5c4c;
+    --ink: #1a2733; --muted: #52657a; --line: #dde5ec; --bg: #f6f9fc; --blue: #1460aa;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); line-height: 1.65; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 1.25rem; }
+  a { color: var(--blue); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-radius: 2px; }
+  .skip { position: absolute; left: -9999px; background: #fff; color: var(--navy); padding: .6rem 1rem; z-index: 10; }
+  .skip:focus { left: .5rem; top: .5rem; }
+
+  header.site { background: var(--navy); color: #fff; }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0; flex-wrap: wrap; }
+  .brand { font-weight: 800; letter-spacing: .04em; font-size: 1.1rem; text-transform: uppercase; color: #fff; text-decoration: none; }
+  .brand span { color: var(--teal); }
+  .nav ul { display: flex; gap: 1.4rem; list-style: none; padding: 0; flex-wrap: wrap; }
+  .nav a:not(.brand) { color: #d7e3ee; text-decoration: none; font-size: .95rem; }
+  .nav a:not(.brand):hover { color: var(--teal); text-decoration: underline; }
+
+  .hero { background: var(--navy); color: #fff; padding: 4rem 0 4.5rem; }
+  .eyebrow { color: var(--teal); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .hero h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); line-height: 1.15; margin: .8rem 0 1rem; max-width: 42rem; }
+  .hero p.lead { color: #c9d7e4; font-size: 1.15rem; max-width: 40rem; }
+  .cta-row { margin-top: 1.8rem; display: flex; gap: .9rem; flex-wrap: wrap; }
+  .btn { display: inline-block; font-weight: 700; padding: .85rem 1.5rem; border-radius: 8px; text-decoration: none; }
+  .btn-primary { background: var(--teal); color: var(--navy); }
+  .btn-primary:hover { background: #97e0d0; }
+  .btn-ghost { border: 1px solid #4d647a; color: #fff; }
+  .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+  .stats { background: var(--navy-2); color: #fff; padding: 1.6rem 0; }
+  .stats .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
+  .stat .num { font-size: 1.6rem; font-weight: 800; color: var(--teal); }
+  .stat .lbl { font-size: .88rem; color: #c9d7e4; }
+
+  main section { padding: 3.5rem 0; }
+  main section:nth-of-type(even) { background: var(--bg); }
+  h2 { font-size: 1.7rem; color: var(--navy); margin-bottom: 1rem; }
+  .sub { color: var(--muted); max-width: 46rem; margin-bottom: 2rem; }
+
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1.6rem; }
+  .card h3 { color: var(--navy); margin-bottom: .3rem; }
+  .price { font-weight: 800; color: var(--teal-dark); margin-bottom: .8rem; }
+  .card ul { padding-left: 1.1rem; color: var(--muted); font-size: .95rem; }
+  .card li { margin: .35rem 0; }
+  .tag { display: inline-block; background: #e6f6f1; color: var(--teal-dark); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; padding: .2rem .6rem; border-radius: 99px; margin-bottom: .7rem; }
+
+  ol.steps { list-style: none; padding: 0; counter-reset: step; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+  ol.steps li { counter-increment: step; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; }
+  ol.steps li::before { content: counter(step); display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--navy); color: var(--teal); font-weight: 800; margin-bottom: .7rem; }
+  ol.steps h3 { font-size: 1.02rem; color: var(--navy); }
+  ol.steps p { font-size: .92rem; color: var(--muted); }
+
+  table { border-collapse: collapse; width: 100%; background: #fff; font-size: .95rem; }
+  caption { text-align: left; color: var(--muted); font-size: .85rem; padding-bottom: .5rem; }
+  th, td { border: 1px solid var(--line); padding: .6rem .9rem; text-align: left; }
+  th { background: var(--bg); color: var(--navy); }
+
+  details.faq { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.2rem; margin: .7rem 0; }
+  details.faq summary { cursor: pointer; font-weight: 700; color: var(--navy); }
+  details.faq p { margin-top: .6rem; color: var(--muted); }
+
+  .contact { background: var(--navy); color: #fff; text-align: center; }
+  .contact h2 { color: #fff; }
+  .contact p { color: #c9d7e4; max-width: 38rem; margin: 0 auto 1.5rem; }
+
+  footer.site { background: #08141f; color: #9fb2c2; font-size: .85rem; padding: 2rem 0; }
+  footer.site a { color: #c9d7e4; }
+  @media (max-width: 640px) { .nav ul { gap: .9rem; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top">Access<span>Harbor</span></a>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#why-now">Why now</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Free scan</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">European Accessibility Act · EN 301 549 · WCAG 2.1 AA</p>
+      <h1>Selling into Europe? Your website is now regulated.</h1>
+      <p class="lead">The European Accessibility Act has been enforceable across all 27 EU member states since June&nbsp;2025 — and it applies to non-EU companies that sell to EU consumers. AccessHarbor gets e-commerce brands audited, remediated, and defensible before a regulator or a lawsuit forces the issue.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Get your free compliance scan</a>
+        <a class="btn btn-ghost" href="#process">See how it works</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num">27</div><div class="lbl">EU member states actively enforcing the EAA</div></div>
+    <div class="stat"><div class="num">€1,000,000</div><div class="lbl">Maximum fine for very serious violations (Spain)</div></div>
+    <div class="stat"><div class="num">6 months</div><div class="lbl">Court-ordered deadline given to Carrefour to fix its site and app (June 2026)</div></div>
+    <div class="stat"><div class="num">94%</div><div class="lbl">Of top websites fail basic WCAG checks (WebAIM Million)</div></div>
+  </div>
+</div>
+
+<main id="main">
+  <section id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <h2 id="services-h">Services</h2>
+      <p class="sub">One clear path from "are we exposed?" to "audited, fixed, and documented" — without hiring a compliance team.</p>
+      <div class="grid-3">
+        <div class="card">
+          <p class="tag">Start here</p>
+          <h3>Compliance Snapshot</h3>
+          <p class="price">Free</p>
+          <ul>
+            <li>Automated WCAG 2.1 AA scan of your key pages (home, product, checkout)</li>
+            <li>Violation report ranked by severity, in plain English</li>
+            <li>20-minute readout call: your actual exposure, and whether the EAA even applies to you</li>
+          </ul>
+        </div>
+        <div class="card">
+          <p class="tag">Core service</p>
+          <h3>Full EAA Audit</h3>
+          <p class="price">From €4,500</p>
+          <ul>
+            <li>Expert manual audit against EN 301 549 / WCAG 2.1 AA — the benchmark EU authorities use</li>
+            <li>Screen reader, keyboard-only, and assistive-technology testing on real user journeys</li>
+            <li>Prioritised remediation roadmap your developers can execute</li>
+            <li>The accessibility statement the EAA requires, drafted for you</li>
+            <li>Re-test and updated report after fixes</li>
+          </ul>
+        </div>
+        <div class="card">
+          <p class="tag">Stay compliant</p>
+          <h3>Remediation &amp; Monitoring</h3>
+          <p class="price">From €1,500/mo</p>
+          <ul>
+            <li>Hands-on fixes with your dev team — or ours</li>
+            <li>Continuous automated monitoring of every release</li>
+            <li>Quarterly attestation report for your legal and procurement files</li>
+            <li>Priority support when a customer complaint or authority inquiry lands</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" aria-labelledby="process-h">
+    <div class="wrap">
+      <h2 id="process-h">How it works</h2>
+      <ol class="steps">
+        <li><h3>Scan</h3><p>Send us your URL. Within 48 hours you get a severity-ranked violation report and a straight answer on whether you're in scope.</p></li>
+        <li><h3>Audit</h3><p>Certified accessibility specialists test your real user journeys against EN 301 549. Typical turnaround: 3 weeks.</p></li>
+        <li><h3>Remediate</h3><p>You get a prioritised, developer-ready roadmap. We work alongside your team (or supply ours) until the blockers are gone.</p></li>
+        <li><h3>Attest &amp; monitor</h3><p>Accessibility statement published, evidence file documented, every release monitored so you stay defensible.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="why-now" aria-labelledby="why-h">
+    <div class="wrap">
+      <h2 id="why-h">Why now</h2>
+      <p class="sub">The European Accessibility Act (Directive (EU) 2019/882) requires e-commerce, banking, transport, and other consumer-facing digital services to be accessible. It has applied to services placed on the EU market since <strong>June 28, 2025</strong>, and enforcement is intensifying through 2026: in June 2026, a French court ordered Carrefour to make its e-commerce site and mobile app fully accessible within six months, under daily penalties. Disability organisations across the EU now have standing to bring complaints — you don't have to wait for a regulator to have a problem.</p>
+      <table>
+        <caption>Example maximum penalties under national EAA implementations</caption>
+        <thead>
+          <tr><th scope="col">Country</th><th scope="col">Maximum penalty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Germany</td><td>Up to €100,000 per violation</td></tr>
+          <tr><td>France</td><td>Up to €250,000, plus €25,000 per year for a missing accessibility statement</td></tr>
+          <tr><td>Spain</td><td>Up to €1,000,000 for very serious violations, plus operational bans</td></tr>
+          <tr><td>Ireland</td><td>Fines up to €60,000 and/or imprisonment up to 18 months</td></tr>
+        </tbody>
+      </table>
+      <p class="sub" style="margin-top:1.2rem;">Beyond fines, authorities can order product withdrawal, block non-compliant services from national markets, and publicly name companies that fall short. And roughly 100 million EU residents live with a disability — inaccessible checkouts turn away paying customers every day.</p>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <details class="faq">
+        <summary>We're a US (or UK, or other non-EU) company. Does the EAA really apply to us?</summary>
+        <p>Yes — the EAA applies to services offered to consumers in the EU, regardless of where the company is established. If EU customers can buy from your site (EUR pricing, EU shipping, EU marketing), you're in scope. Where you're based determines which member state's authority you'd deal with, not whether the law applies.</p>
+      </details>
+      <details class="faq">
+        <summary>Isn't an accessibility overlay widget enough?</summary>
+        <p>No. Overlay widgets don't fix the underlying code, and they have not protected companies from legal action — many accessibility lawsuits have been filed against sites running overlays. European authorities assess conformance against EN 301 549; an overlay doesn't change what an audit finds.</p>
+      </details>
+      <details class="faq">
+        <summary>What are WCAG 2.1 AA and EN 301 549?</summary>
+        <p>WCAG 2.1 AA is the international standard for web accessibility. EN 301 549 is the harmonised European standard that incorporates it and is the benchmark authorities use when assessing EAA compliance. Meeting EN 301 549 gives you a presumption of conformity with the EAA's requirements.</p>
+      </details>
+      <details class="faq">
+        <summary>Are small companies exempt?</summary>
+        <p>Microenterprises providing services — fewer than 10 staff <em>and</em> under €2M annual turnover — are exempt from the EAA's service requirements. Almost everyone else selling to EU consumers is in scope. We'll tell you honestly in the free readout if you're exempt.</p>
+      </details>
+      <details class="faq">
+        <summary>What happens on the free scan?</summary>
+        <p>We run an automated WCAG 2.1 AA scan of your key pages and send you a severity-ranked report of actual violations found on your site — not a generic checklist. Then, if you want it, a 20-minute call to walk through your exposure and options. No obligation; the report is yours either way.</p>
+      </details>
+      <details class="faq">
+        <summary>How fast can we become compliant?</summary>
+        <p>The audit takes about 3 weeks. Remediation depends on your codebase — typically 30–90 days for an e-commerce site, prioritised so the highest-risk barriers are fixed first. You'll have a documented, in-progress compliance program from week one, which materially changes your posture if anyone comes asking.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <h2 id="contact-h">Get your free compliance scan</h2>
+      <p>Email us your website address. Within 48 hours you'll have a severity-ranked violation report and a straight answer on your EAA exposure.</p>
+      <a class="btn btn-primary" href="mailto:donald@accessharbor.com?subject=Free%20compliance%20scan&amp;body=Website%3A%20%0ACompany%3A%20">Email donald@accessharbor.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>© 2026 AccessHarbor. We are accessibility auditors and remediation specialists, not a law firm; nothing on this site is legal advice. Penalty figures reflect national implementations of Directive (EU) 2019/882 as published and may change.</p>
+  </div>
+</footer>
+</body>
+</html>
