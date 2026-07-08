@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo Store — seeded with common accessibility violations for sample reports</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; }
+  .hero { background: #e8e8e8; color: #b5b5b5; padding: 40px; }
+  .products { display: flex; gap: 16px; padding: 24px; }
+  .card { border: 1px solid #ddd; padding: 12px; width: 200px; }
+  .price { color: #cfcfcf; }
+  .btn { background: #eee; border: none; padding: 10px 14px; cursor: pointer; }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <h1>SUMMER DROP 2026</h1>
+    <p>Free EU shipping on orders over €80</p>
+  </div>
+
+  <div class="products">
+    <div class="card">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="180" height="120">
+      <h3>Oversized Tee</h3>
+      <p class="price">€45.00</p>
+      <button class="btn"><span class="icon-cart"></span></button>
+    </div>
+    <div class="card">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="180" height="120">
+      <h3>Cargo Pants</h3>
+      <p class="price">€89.00</p>
+      <a href="#"><span class="icon-cart"></span></a>
+    </div>
+  </div>
+
+  <div style="padding: 24px;">
+    <h3>Join the newsletter</h3>
+    <form>
+      <input type="email" placeholder="email">
+      <button class="btn">→</button>
+    </form>
+  </div>
+</body>
+</html>
