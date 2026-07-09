@@ -11,7 +11,7 @@ _Last updated: 2026-07-09 morning (Europe time)._
 - **Tooling:** scan tool works on Donald's MacBook Air (`accessharbor/scan`, run from Terminal). Reports live in `scan/reports/` on his machine.
 - **18 prospect pitches** sent or queued across FR/DE/AT/SE/ES/IT/UK/US (see tracker). Sent from Gmail; drafts are created by Claude directly in Donald's Gmail via the Gmail integration.
 - **5 white-label delivery partners pitched** (2026-07-09): Captain Coder (hello@captcoder.com), AccessAudit (compliance@accessaudit.co), Accessible Pixels (hello@accessiblepixels.com — guessed address), plus contact forms at digitalaccessibilityaudit.com and whitelabeliq.com. **No partner signed yet — this is the open bottleneck.**
-- **Not done yet:** domain purchase (accessharbor.com), professional email, landing page not hosted, Calendly not created. Outreach runs on gmail for now, ~10 sends/day ceiling.
+- **Domain purchased 2026-07-09: accessharbor.org** (Namecheap). Google Workspace setup in progress → donald@accessharbor.org. Warm-up starts once live: 2–3 sends/day ramping to 30–50/day by ~week 3. Landing page hosting and Calendly still pending. Cold outreach stays on gmail (~10/day ceiling) until the new address is warmed.
 
 ## Cadence (as of Thu 2026-07-09)
 
