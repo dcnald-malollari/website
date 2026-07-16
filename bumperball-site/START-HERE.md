@@ -106,5 +106,8 @@ Open any `.html` file in a text editor (Notepad / TextEdit works):
   review (spelling of "Bumper" tidied up). More reviews will make that section stronger.
 - No business hours are published anywhere (same as your old site) — add them to
   the footer if you'd like.
+- The photos of kids came from your current site. If you don't already have
+  signed photo permissions from their parents on file, it's smart to get them
+  (or swap in photos where faces aren't recognizable).
 
 Have fun out there! 🎉

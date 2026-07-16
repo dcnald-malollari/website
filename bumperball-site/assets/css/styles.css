@@ -50,6 +50,7 @@
   --sky-tint: #eaf5fc;
   --red: #e2384a;
   --red-deep: #c22b3b;
+  --red-darker: #a52333;
   --ink: #16283b;
   --slate: #46617d;
   --line: #d9e6f2;
@@ -82,7 +83,9 @@ a:hover { color: var(--blue); }
 h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 .5em; }
 p { margin: 0 0 1em; }
 ul { padding-left: 1.2em; }
-:focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; border-radius: 4px; }
+:focus-visible { outline: 3px solid var(--blue-deep); outline-offset: 2px; border-radius: 4px; }
+.hero :focus-visible, .page-hero :focus-visible, .section--navy :focus-visible, .cta-band :focus-visible,
+.footer :focus-visible, .topbar :focus-visible, .action-bar :focus-visible { outline-color: var(--sky); }
 ::selection { background: var(--sky); color: var(--navy-deep); }
 
 @media (prefers-reduced-motion: reduce) {
@@ -102,7 +105,7 @@ ul { padding-left: 1.2em; }
   font-size: .82rem;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--red-deep);
   margin-bottom: .8em;
 }
 .section--navy .kicker { color: var(--sky); }
@@ -141,8 +144,8 @@ h3.h-display { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
 }
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: translateY(0); }
-.btn--red { background: var(--red); color: #fff; box-shadow: 0 6px 18px rgba(226, 56, 74, .35); }
-.btn--red:hover { background: var(--red-deep); color: #fff; box-shadow: 0 10px 24px rgba(226, 56, 74, .42); }
+.btn--red { background: var(--red-deep); color: #fff; box-shadow: 0 6px 18px rgba(194, 43, 59, .35); }
+.btn--red:hover { background: var(--red-darker); color: #fff; box-shadow: 0 10px 24px rgba(165, 35, 51, .42); }
 .btn--blue { background: var(--blue); color: #fff; box-shadow: 0 6px 18px rgba(27, 117, 188, .32); }
 .btn--blue:hover { background: var(--blue-deep); color: #fff; }
 .btn--ghost { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.55); }
@@ -163,7 +166,8 @@ h3.h-display { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
 .topbar .container { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .topbar a { color: #fff; text-decoration: none; font-weight: 600; }
 .topbar a:hover { color: var(--sky); }
-.topbar__contact { display: flex; gap: 18px; align-items: center; }
+.topbar__contact { display: flex; gap: 6px 18px; align-items: center; flex-wrap: wrap; }
+.topbar__contact a { white-space: nowrap; }
 .topbar__contact svg { width: .95em; height: .95em; vertical-align: -1px; margin-right: 6px; fill: var(--sky); }
 .topbar__social { display: flex; gap: 12px; align-items: center; }
 .topbar__social a { display: inline-flex; }
@@ -198,7 +202,7 @@ h3.h-display { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
   color: var(--navy);
   letter-spacing: .02em;
 }
-.brand__tag { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--red); }
+.brand__tag { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--red-deep); }
 
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a {
@@ -388,7 +392,7 @@ h3.h-display { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--red);
+  background: var(--red-deep);
   color: #fff;
   font-size: .72rem;
   font-weight: 800;
@@ -397,7 +401,7 @@ h3.h-display { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
   border-radius: 999px;
   padding: 6px 14px;
   white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(226, 56, 74, .4);
+  box-shadow: 0 4px 12px rgba(194, 43, 59, .4);
 }
 .pkg__dur {
   font-weight: 800;
@@ -535,7 +539,7 @@ h3.h-display { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
   margin-bottom: 12px;
 }
 .contact-card__icon svg { width: 26px; height: 26px; fill: var(--blue); }
-.contact-card h3 { font-size: 1.15rem; color: var(--navy); margin-bottom: 2px; }
+.contact-card h2, .contact-card h3 { font-family: var(--font-body); font-weight: 700; font-size: 1.15rem; color: var(--navy); margin-bottom: 2px; }
 .contact-card p { color: var(--slate); font-size: .95rem; }
 .contact-card .btn { margin-top: auto; align-self: flex-start; }
 
@@ -560,6 +564,10 @@ input:focus, select:focus, textarea:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 4px rgba(27, 117, 188, .14);
 }
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--blue-deep);
+  outline-offset: 2px;
+}
 textarea { resize: vertical; min-height: 120px; }
 .form-note { font-size: .85rem; color: var(--slate); }
 .form-status { display: none; border-radius: 12px; padding: 16px 18px; font-weight: 600; margin-top: 16px; }
@@ -579,7 +587,7 @@ textarea { resize: vertical; min-height: 120px; }
 }
 .doc h2 { font-size: 1.35rem; color: var(--navy); text-align: center; margin-bottom: 1.2em; }
 .doc p { font-size: .97rem; }
-.doc .sig-lines { color: var(--slate); font-size: .92rem; }
+.doc .sig-lines { color: var(--slate); font-size: .92rem; overflow-wrap: anywhere; }
 
 /* ---------- Page hero (interior pages) ---------- */
 .page-hero {
@@ -614,7 +622,7 @@ textarea { resize: vertical; min-height: 120px; }
 .footer__brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 .footer__brand img { width: 54px; height: 54px; }
 .footer__brand span { font-family: var(--font-display); font-size: 1.25rem; text-transform: uppercase; color: #fff; }
-.footer h4 { color: #fff; font-size: .95rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 14px; }
+.footer h2 { font-family: var(--font-body); font-weight: 700; color: #fff; font-size: .95rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 14px; }
 .footer ul { list-style: none; padding: 0; margin: 0; }
 .footer li { margin-bottom: 9px; }
 .footer__contact li { display: flex; gap: 10px; align-items: flex-start; }
@@ -670,7 +678,7 @@ textarea { resize: vertical; min-height: 120px; }
   background: rgba(255,255,255,.1);
 }
 .action-bar a svg { width: 18px; height: 18px; fill: #fff; }
-.action-bar a.is-book { background: var(--red); }
+.action-bar a.is-book { background: var(--red-deep); }
 @media (max-width: 760px) {
   .action-bar { display: flex; }
   body { padding-bottom: 68px; }
