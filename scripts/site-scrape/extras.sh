@@ -47,3 +47,14 @@ get "https://files.sysers.com/cp/upload/bumper/editor/full/nav-bakgd-5.jpg" "$IM
 
 echo "--- waiver text sniff ---"
 grep -l -i -E "release|liability|assumption of risk|indemnif" "$OUT"/* 2>/dev/null || echo "no waiver legal text found in JS"
+
+# Generic URL fetch list (one "url outfile" pair per line) into scrape-dump/gen/
+LIST="$ROOT/scripts/site-scrape/fetch-list.txt"
+GEN="$ROOT/scrape-dump/gen"
+if [ -f "$LIST" ]; then
+  mkdir -p "$GEN"
+  while read -r url out; do
+    [ -z "$url" ] && continue
+    get "$url" "$GEN/$out"
+  done < "$LIST"
+fi
