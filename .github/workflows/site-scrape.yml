@@ -1,0 +1,34 @@
+name: Site scrape (one-time)
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Playwright
+        run: |
+          mkdir -p /tmp/pw && cd /tmp/pw
+          npm init -y >/dev/null
+          npm install playwright@1.49.1 --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Crawl site
+        run: |
+          cd scripts/site-scrape
+          NODE_PATH=/tmp/pw/node_modules node crawl.js
+      - name: Commit dump back to branch
+        run: |
+          git config user.name "site-scrape-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A scrape-dump
+          git commit -m "Add scrape dump of existing bumperballchicago.com" || echo "nothing to commit"
+          git pull --rebase origin "${GITHUB_REF_NAME}" || true
+          git push origin "HEAD:${GITHUB_REF_NAME}"
