@@ -48,10 +48,10 @@ Your current site AND your online booking checkout both run on Event Rental
 Systems (ERS) at your domain today. The new website replaces the *site*, but your
 booking/checkout and online waiver still run on ERS — the new site links to them.
 
-- **If you keep ERS** (recommended if you want online card payments): ask ERS
-  support for your permanent ERS web address (usually looks like
-  `bumper.ourers.com`) and make sure booking links keep working after the domain
-  moves — I've already set the site up for this (see section below). Then, at the
+- **If you keep ERS** (recommended if you want online card payments): good news —
+  the new site's "Book Online" and waiver-signing buttons already point at your
+  permanent ERS address (`bumper.ourers.com`), which I verified works. It keeps
+  working before AND after the domain moves, so nothing breaks. Then, at the
   place where you bought the domain (GoDaddy, Namecheap, etc.), open **DNS
   settings** and point the domain at your new host — Netlify shows the exact
   records to add under *Domain settings → Add custom domain* and gives you free
