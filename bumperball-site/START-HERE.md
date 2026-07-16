@@ -100,7 +100,7 @@ Open any `.html` file in a text editor (Notepad / TextEdit works):
 
 ## 7. Small things you may want to tweak
 
-- The About/Booking pages list **(630) 465-1088** as an alternate number (it was
+- The Booking page lists **(630) 465-1088** as an alternate number (it was
   in your old About page). Remove it if that line is retired.
 - Yelp shows your 5.0★ rating with 2 reviews; the home page quotes the one public
   review (spelling of "Bumper" tidied up). More reviews will make that section stronger.

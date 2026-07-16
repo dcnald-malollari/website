@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://formsubmit.co; form-action https://formsubmit.co 'self'; base-uri 'self'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Bumper Ball Chicago — Bubble Soccer Party Rentals | We Bring the Party to You</title>
-  <meta name="description" content="Chicago's #1 source for bumper ball & bubble soccer party rentals. 10 official bumper ball suits, referee and all equipment included — we come to any location in Chicagoland. Call (331) 431-1134.">
+  <title>Bumper Ball Chicago — Bubble Soccer Party Rentals</title>
+  <meta name="description" content="Chicago's #1 bumper ball & bubble soccer party rentals — 10 suits, referee & all equipment, delivered anywhere in Chicagoland. Call (331) 431-1134.">
   <meta name="keywords" content="bumper ball rentals, bubble soccer rentals, knocker ball rentals, Chicago, Chicagoland">
   <link rel="canonical" href="https://www.bumperballchicago.com/">
   <meta property="og:type" content="website">
@@ -17,8 +17,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preload" as="image" href="assets/img/hero-2000.jpg" media="(min-width: 900px)">
-  <link rel="preload" as="image" href="assets/img/hero-1200.jpg" media="(max-width: 899px)">
+  <link rel="preload" as="image" href="assets/img/hero-2000.jpg" media="(min-width: 721px)">
+  <link rel="preload" as="image" href="assets/img/hero-1200.jpg" media="(min-width: 481px) and (max-width: 720px)">
+  <link rel="preload" as="image" href="assets/img/hero-720.jpg" media="(max-width: 480px)">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script type="application/ld+json">
   {
@@ -88,6 +89,7 @@
     <section class="hero">
       <div class="hero__media">
         <picture>
+          <source media="(max-width: 480px)" srcset="assets/img/hero-720.jpg">
           <source media="(max-width: 720px)" srcset="assets/img/hero-1200.jpg">
           <img src="assets/img/hero-2000.jpg" alt="Two players in red and blue Bumper Ball Chicago bubble suits colliding on a sunny park field with the Chicago skyline behind them" fetchpriority="high">
         </picture>

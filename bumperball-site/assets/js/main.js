@@ -66,10 +66,13 @@
       btn.textContent = 'Sending…';
       status.className = 'form-status';
 
-      fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+      Promise.resolve().then(function () {
+        if (typeof fetch !== 'function') { throw new Error('no fetch'); }
+        return fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
       }).then(function (res) {
         if (!res.ok) throw new Error('send failed');
         form.reset();
