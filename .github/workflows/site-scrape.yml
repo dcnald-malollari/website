@@ -1,6 +1,9 @@
 name: Site scrape (one-time)
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/site-scrape/**'
 
 permissions:
   contents: write
