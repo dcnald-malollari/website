@@ -14,19 +14,8 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Install Playwright
-        run: |
-          mkdir -p /tmp/pw && cd /tmp/pw
-          npm init -y >/dev/null
-          npm install playwright@1.49.1 --no-audit --no-fund
-          npx playwright install --with-deps chromium
-      - name: Crawl site
-        run: |
-          cd scripts/site-scrape
-          NODE_PATH=/tmp/pw/node_modules node crawl.js
+      - name: Fetch extras
+        run: bash scripts/site-scrape/extras.sh
       - name: Commit dump back to branch
         run: |
           git config user.name "site-scrape-bot"
